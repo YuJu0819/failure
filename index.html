@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <style>
+      body {
+        background-image: url("icon/back1.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed; 
+        background-size: 100% 100%;
+      }
+      a:hover{
+          color: red;
+      }
+      .hobby{
+        position: absolute;
+        top: 10px;
+        left: 300px;
+     }
+      span.text{
+        position: absolute;
+        top: 70px;
+        left: 300px;
+        right :100px;
+      }
+      .wrap{
+          position:absolute;
+          left:20px;
+          top:0px;
+      }
+      .time{
+        position: absolute;
+        top: 10px;
+        left: 700px;
+      }
+      .media{
+          position: absolute;
+          left: 300px;
+          top: 700;
+      }
+      p { color: #4c4a37; font-family: 'Source Sans Pro', sans-serif; font-size: 18px; line-height: 32px; margin: 0 0 24px; }
+      h1 { color: #7c795d; font-family: 'Trocchi', serif; font-size: 40px; font-weight: normal; line-height: 48px; }
+      img {box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;;}
+    </style>
+    <title>Ricky's website</title>
+    <link rel="icon" type="image/png" href="icon/images.png" />
+	<audio autoplay loop>
+		<source src = "icon/blueming.mp3" type = "audio/mpeg">
+	</audio>
+    
+  </head>
+  <body onload='timing()'>
+    <span class="wrap">
+        <h1 >YU-JU CHENG</h1>
+        <img src="icon/eenight.png" width="250" />
+        <p>
+		     <h4>
+			    more info about <a href="https://www2.ck.tp.edu.tw">CKHS</a>
+		    </h4>
+		    <h4>
+                more info about <a href="https://web.ee.ntu.edu.tw">NTUEE</a> 
+		    </h4>
+	    </p>
+        <br><br>
+        <span>
+            <img src = "icon/iu.jpeg" height ="280">
+            <img src = "icon/iu1.webp" height = "280">
+            <img src = "icon/iu2.jpeg" height = "280">
+        </span>
+    </span>
+    <span class = "hobby">
+        <h4>My hobbies : <a href = "https://www.netflix.com/tw/" >NETFLIX</a>
+            <a href = "https://moba.garena.tw">mobile game</a>
+            <a href = "http://www.hrc.com.tw/schedule.php">Dancing</a> </h4> 
+        
+    </span>
+    <span class = "time">
+        <h4 id = "time"></h4>
+    </span>
+    <span class = "text">
+        <h2>Biosketch :</h2>
+        <p >
+            Graduated from CKHS, I study in NTUEE now. I'm a hard-core fan of IU, a Korean singer
+            and also an actress too. I recommend all of you to watch "Hotel del luna", 
+            in which IU is the main actress. She is so elegant and gorgeous. Besides,
+            her apperance, she is also a kind-hearted person. She denote huge amount
+            of money to help the weak. How can a person be so flawless!! In leisure time, 
+             I like to binge-watching NETFLIX, playing mobile game or dancing! Locking is my favorite style of 
+            pop dance. I've also attended the dancing show in EE night 
+            (click <a href = "https://youtu.be/yuZ_TZQqW84">here</a> to observe our performance). In the future.
+            I aspire to be an outstanding engineerer and makes lots of money to live 
+            a luxurious life and buy all the merchandise of IU. 
+        </p>
+        <br>
+        <p>my email : ricky081900rr@gmail.com</p>
+        
+    </span>
+    <script type = "text/javascript">
+        function timing(){
+            var today = new Date();
+            var hour, minute, sec;
+            if(today.getHours()<10){
+                hour = '0'+today.getHours();
+            }
+            else hour = today.getHours(); 
+            if(today.getMinutes()<10){
+                minute = '0'+today.getMinutes();
+            }
+            else minute = today.getMinutes(); 
+            if(today.getSeconds()<10){
+                sec = '0'+today.getSeconds();
+            }
+            else sec = today.getSeconds(); 
+            var date = (today.getMonth()+1)+'-'+(today.getDate())+'-'+(today.getFullYear());
+            var time = hour+':'+minute+':'+sec;
+            var timing = date+"  "+time;
+            document.getElementById("time").innerHTML = timing;
+        }
+        setInterval(timing, 1)
+    </script>
+  </body>
+</html>
